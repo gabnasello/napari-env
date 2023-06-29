@@ -1,0 +1,7 @@
+lckr-jupyterlab-variableinspector
+numpy
+matplotlib
+pandas
+seaborn
+napari[all]
+scikit-image

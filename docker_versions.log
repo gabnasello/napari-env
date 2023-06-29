@@ -1,0 +1,14 @@
+-------------------------------
+v. 20230629
+
+Docker container from jupyter/base-notebook:python-3.10.6
+
+Python packages added:
+
+lckr-jupyterlab-variableinspector
+numpy
+matplotlib
+pandas
+seaborn
+napari[all]
+scikit-image

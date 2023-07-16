@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Napari-jupyter
+Comment=Jupyter Lab
+Exec=jupyter lab
+Icon=/usr/local/lib/python3.10/dist-packages/jupyterlab/docs/source/_static/logo-icon.png
+Terminal=true
+Type=Application

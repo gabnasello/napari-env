@@ -6,38 +6,20 @@ From the project folder, run the command below:
 
 ```bash build.sh```
 
-# Run Docker container
+# Run docker container
 
-## docker-compose approach (recommended)
-
-Be aware that the user ```researcher``` within you Docker container won't share the same ID as the host user!
+## Standard approach (recommended)
 
 From the project folder, run the command below:
 
-```docker-compose up```
+```docker-compose up -d```
 
 ## Alternative approach
 
 You can run the following command:
 
-```
-docker run -it --rm \
-               -p 8888:8888 \
-               -e DISPLAY=$DISPLAY \
-               -v /tmp/.X11-unix:/tmp/.X11-unix:ro  \
-               gnasello/napari-env:2023-06-29
-```
+```docker run -it -d -p 3000:3000 gnasello/napari-env:latest```
 
-# Run Napari GUI
+# Use the Docker
 
-If you want to run the Napari GUI, remember to allow X server connection before running the container:
-
-```
-xhost +local:*
-```
-
-and disallow  server connection after running the container:
-
-```
-xhost -local:*
-```
+Open ```localhost:3000``` in your browser to get a virtual desktop already running 3D Slicer.

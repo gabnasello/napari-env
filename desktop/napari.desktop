@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Napari
+Comment=Napari
+Exec=python -m "napari"
+Icon=/usr/local/lib/python3.10/dist-packages/napari/resources/logo.png
+Terminal=false
+Type=Application

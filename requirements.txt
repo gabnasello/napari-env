@@ -1,7 +1,8 @@
-lckr-jupyterlab-variableinspector
+jupyterlab
 numpy
 matplotlib
 pandas
 seaborn
 napari[all]
+aicsimageio
 scikit-image

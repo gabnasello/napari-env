@@ -1,16 +1,22 @@
-version: '3'
-
+---
+version: "3"
 services:
-  datascience:
-    image: gnasello/napari-env:2023-06-29
-    build: .
-    ports:
-      - $JLPORT:$JLPORT
-    volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix:ro
-    hostname: $HOST_NAME
+  slicer-env:
+    image: gnasello/napari-env:2023-07-16
+    container_name: webtop
+    security_opt:
+      - seccomp:unconfined # for terminal to work
     environment:
-       - JLPORT=${JLPORT}
-       - HOME_RESEARCHER=${HOME_RESEARCHER}
-       - HOST_NAME=${HOST_NAME}
-       - DISPLAY=0
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      #- SUBFOLDER=/ #optional
+      - TITLE=Napari #optional
+    #volumes:
+      #- /path/to/directory:/config/researcher_home
+      #- /var/run/docker.sock:/var/run/docker.sock #optional
+    ports:
+      - 3000:3000
+    #devices:
+      #- /dev/dri:/dev/dri #optional
+    shm_size: "1gb" #optional

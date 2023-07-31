@@ -6,3 +6,5 @@ seaborn
 napari[all]
 aicsimageio
 scikit-image
+aicspylibczi
+napari-aicsimageio

@@ -1,9 +1,9 @@
 ---
 version: "3"
 services:
-  slicer-env:
-    image: gnasello/napari-env:2023-07-16
-    container_name: webtop
+  napari-env:
+    image: gnasello/napari-env:2023-07-31
+    container_name: napari-env
     security_opt:
       - seccomp:unconfined # for terminal to work
     environment:

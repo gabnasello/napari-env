@@ -2,10 +2,15 @@ FROM lscr.io/linuxserver/webtop:amd64-ubuntu-kde-version-0f29909a
 
 # Configure environment
 ENV DOCKER_IMAGE_NAME='napari-env'
-ENV VERSION='2023-07-31' 
+ENV VERSION='2023-09-11' 
 
 # title
 ENV TITLE=Napari
+
+# ports and volumes
+EXPOSE 3000
+
+VOLUME /config
 
 RUN apt-get update && \
     apt-get install -y vim git\ 
@@ -43,12 +48,9 @@ COPY /desktop/napari.desktop /usr/share/applications/
 COPY /desktop/napari.desktop /config/Desktop/
 RUN chmod 777 /config/Desktop/napari.desktop
 
-RUN cp /usr/local/share/applications/jupyterlab.desktop /config/Desktop/jupyterlab.desktop
-RUN chmod 777 /config/Desktop/jupyterlab.desktop
+#COPY /desktop/jupyter.desktop /usr/share/applications/
+COPY /desktop/jupyter.desktop /config/Desktop/
+#RUN cp /usr/local/share/applications/jupyterlab.desktop /config/Desktop/jupyterlab.desktop
+RUN chmod 777 /config/Desktop/jupyter.desktop
 
-# ports and volumes
-EXPOSE 3000
-
-VOLUME /config
-
-RUN chmod 777 -R /config/.cache
+#RUN chmod 777 -R /config/.cache

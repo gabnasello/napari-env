@@ -9,3 +9,9 @@ scikit-image
 aicspylibczi
 napari-aicsimageio
 vtk
+tensorflow
+SimpleITK
+tetgen
+meshlib
+stardist
+stardist-napari

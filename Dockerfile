@@ -2,7 +2,7 @@ FROM lscr.io/linuxserver/webtop:amd64-ubuntu-kde-version-0f29909a
 
 # Configure environment
 ENV DOCKER_IMAGE_NAME='napari-env'
-ENV VERSION='2023-09-11' 
+ENV VERSION='2023-10-07' 
 
 # title
 ENV TITLE=Napari
@@ -39,6 +39,9 @@ RUN apt-get update && \
         libxcb-xfixes0 \
         libxcb-shape0 \
         && apt-get clean
+
+# Install openCV
+RUN apt install libopencv-dev python3-opencv -y
 
 # Install Python packages
 ADD requirements.txt /

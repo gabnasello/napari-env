@@ -15,3 +15,6 @@ tetgen
 meshlib
 stardist
 stardist-napari
+pyvista
+meshio
+pymeshlab

@@ -1,4 +1,15 @@
 -------------------------------
+v. 2023-10-12
+
+Install the following Python package:
+
+pyvista
+meshio
+pymeshlab
+
+outside requirements.txt - mayavi
+
+-------------------------------
 v. 2023-10-07
 
 Install the following Python package:

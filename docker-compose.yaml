@@ -2,7 +2,7 @@
 version: "3"
 services:
   napari-env:
-    image: gnasello/napari-env:2023-10-16
+    image: gnasello/napari-env:2024-05-15
     container_name: napari-env
     security_opt:
       - seccomp:unconfined # for terminal to work

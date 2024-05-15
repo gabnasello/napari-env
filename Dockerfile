@@ -1,8 +1,8 @@
-FROM lscr.io/linuxserver/webtop:amd64-ubuntu-kde-version-0f29909a
+FROM lscr.io/linuxserver/webtop:amd64-ubuntu-kde-version-b7c41cf2
 
 # Configure environment
 ENV DOCKER_IMAGE_NAME='napari-env'
-ENV VERSION='2023-10-16' 
+ENV VERSION='2024-05-15' 
 
 # title
 ENV TITLE=Napari

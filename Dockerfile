@@ -2,7 +2,7 @@ FROM lscr.io/linuxserver/webtop:amd64-ubuntu-kde-version-0f29909a
 
 # Configure environment
 ENV DOCKER_IMAGE_NAME='napari-env'
-ENV VERSION='2023-10-12' 
+ENV VERSION='2023-10-16' 
 
 # title
 ENV TITLE=Napari
@@ -46,7 +46,6 @@ RUN apt install libopencv-dev python3-opencv -y
 # Install Python packages
 ADD requirements.txt /
 RUN pip install -r /requirements.txt
-RUN pip install mayavi
 
 COPY /desktop/napari.desktop /usr/share/applications/
 COPY /desktop/napari.desktop /config/Desktop/
